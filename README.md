@@ -1,2 +1,3 @@
 # JavaScript-Mini-Projects
-JavaScript Mini Projects
+Here are the JavaScript Mini Projects :
+1. Instgram Love
