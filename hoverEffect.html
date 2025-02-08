@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        html,body {
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            background-color: #111;
+            position: relative;
+        }
+        .elem{
+            height: 120px;
+            width: 100%;
+            border-bottom: 2px solid white;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            position: relative;
+        }
+        .elem h1{
+           font-size: 5vw; 
+           position: relative;
+           z-index: 9;
+           mix-blend-mode: difference;
+           cursor: pointer;
+        }
+        .elem img{
+            height: 110px;
+            width: 110px;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 50%;
+            position: absolute;
+            /* transform: translate(-50%, -50%) ; */
+            opacity: 0;
+            transition: all linear 0.3s;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="elem1" class="elem">
+            <h1>Instagram</h1>
+            <img src="https://plus.unsplash.com/premium_photo-1680995369588-502d70f0e3c8?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8" alt="">
+        </div>
+        <div class="elem">
+            <h1>Facebook</h1>
+            <img src="https://images.unsplash.com/photo-1737559217439-a5703e9b65cb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyfHx8ZW58MHx8fHx8" alt="">
+        </div>
+        <div class="elem">
+            <h1>Twitter</h1>
+            <img src="https://images.unsplash.com/photo-1737551828838-f9a67900eab4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyMHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div class="elem">
+            <h1>Linkedin</h1>
+            <img src="https://images.unsplash.com/photo-1737551869616-c0e28ee340d2?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyN3x8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        <div class="elem">
+            <h1>Leetcode</h1>
+            <img src="https://images.unsplash.com/photo-1737625776369-dd2ff99abd90?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwyOHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+    </div>
+
+    <script>
+
+        // For One Elemnt Only
+        // let element1 = document.querySelector("#elem1");
+        // let elemImage = document.querySelector("#elem1 img");
+
+        // // mouse move
+        // element1.addEventListener("mousemove", function(dets){
+        //     elemImage.style.left = dets.x + "px";
+        //     elemImage.style.top = dets.y + "px"
+        // })
+        // // mouse enter
+        // element1.addEventListener("mouseenter", function(dets){
+        //     elemImage.style.opacity = 1
+        // })
+        // // mouse leave
+        // element1.addEventListener("mouseleave", function(dets){
+        //     elemImage.style.opacity = 0
+        // })
+
+        
+        // For Every Element
+
+        let element = document.querySelectorAll(".elem"); 
+        element.forEach(function(val){
+            // console.log(val)
+            // MouseEnter Event
+            val.addEventListener("mouseenter", function(){
+                // childNode for Image
+                val.childNodes[3].style.opacity = 1;
+                
+            })
+
+            // MouseLeave Event
+            val.addEventListener("mouseleave", function(){
+                val.childNodes[3].style.opacity = 0;
+            })
+
+            // MouseMove Event
+            val.addEventListener("mousemove", function(dets){
+                val.childNodes[3].style.left = dets.x + "px";
+            })
+
+        })
+    </script>
+</body>
+
+</html>
