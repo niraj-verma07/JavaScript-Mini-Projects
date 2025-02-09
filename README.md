@@ -4,3 +4,4 @@ Here are the JavaScript Mini Projects :
 2.  Custom Cursor
 3. Image Slider
 4. Hover Effect
+5. Random Color Generator
