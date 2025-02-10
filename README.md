@@ -5,3 +5,4 @@ Here are the JavaScript Mini Projects :
 3. Image Slider
 4. Hover Effect
 5. Random Color Generator
+6. Text to Search
