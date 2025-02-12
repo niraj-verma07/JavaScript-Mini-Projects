@@ -6,3 +6,4 @@ Here are the JavaScript Mini Projects :
 4. Hover Effect
 5. Random Color Generator
 6. Text to Search
+7. OTP Generator
