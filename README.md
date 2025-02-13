@@ -7,3 +7,4 @@ Here are the JavaScript Mini Projects :
 5. Random Color Generator
 6. Text to Search
 7. OTP Generator
+8. Digital Clock
