@@ -8,3 +8,4 @@ Here are the JavaScript Mini Projects :
 6. Text to Search
 7. OTP Generator
 8. Digital Clock
+9. Palindrome Checker
