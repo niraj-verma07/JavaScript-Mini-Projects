@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hex Color Generator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f1f1f1;
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            background: #f51919b1;
+            color: white;
+            border-radius: 5px;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Background Color: <span id="color-code">#f1f1f1</span></h1>
+    <button id="btn">Change Color</button>
+
+    <script>
+        const button = document.getElementById("btn");
+        const colorCode = document.getElementById("color-code");
+
+        function getRandomColor() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        button.addEventListener("click", () => {
+            const newColor = getRandomColor();
+            document.body.style.backgroundColor = newColor;
+            colorCode.textContent = newColor;
+        });
+    </script>
+</body>
+</html>
