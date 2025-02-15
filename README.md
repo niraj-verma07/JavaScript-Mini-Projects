@@ -9,3 +9,4 @@ Here are the JavaScript Mini Projects :
 7. OTP Generator
 8. Digital Clock
 9. Palindrome Checker
+10. Hex Code Color Generator
