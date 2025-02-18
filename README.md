@@ -10,3 +10,4 @@ Here are the JavaScript Mini Projects :
 8. Digital Clock
 9. Palindrome Checker
 10. Hex Code Color Generator
+11. Stop Watch
